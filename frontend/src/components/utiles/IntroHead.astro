@@ -1,0 +1,25 @@
+---
+import LinkButton from "../mini/LinkButton.astro";
+import searching_someone from "../../assets/searching3.png";
+import { Image } from "astro:assets";
+---
+
+<div class="heading">
+    <div class="p-0 flex flex-row flex-wrap justify-around items-center">
+        <div class="intro flex flex-col gap-6">
+            <h1 class="font-extralight desktop:text-6xl">
+                <span>Find Your <br />Best Buddy <br /> Near You</span>
+            </h1>
+            <div>
+                <LinkButton path="/auth">Get Started</LinkButton>
+            </div>
+        </div>
+        <div class="image">
+            <Image
+                class="scale-x-[-1]"
+                src={searching_someone}
+                alt="Searching Pic"
+            />
+        </div>
+    </div>
+</div>

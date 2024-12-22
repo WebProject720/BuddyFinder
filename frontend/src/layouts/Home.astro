@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="./src/assets/logo.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Get Your Buddy</title>
+	</head>
+	<body class="bg-aqua_c">
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		/* template 1 */
+		--green-color: #49c5b6;
+		--gray-color: #9c9c9c;
+		--white-color: #ffffff;
+	}
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.pattern {
+		@apply absolute inset-0 bg-[radial-gradient(circle_at_center,#ffffff33_0,var(--green-color)_8px,#acc7d7bf_8px),radial-gradient(circle_at_center,var(--green-color)_0,var(--green-color)_8px,transparent_8px)] bg-[size:30px_30px,30px_30px] bg-[position:0_0,15px_15px];
+	}
+	.smooth{
+		@apply transition-all duration-700 delay-0
+	}
+</style>

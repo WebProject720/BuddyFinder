@@ -1,0 +1,12 @@
+---
+interface Props {
+    path: string;
+}
+const { path } = Astro.props;
+---
+
+<div class="link bg-blue_c smooth hover:rounded-md rounded-l-full rounded-r-full text-white_c p-3 px-5 rounded-md font-bold w-fit ">
+    <a href={path}>
+        <slot />
+    </a>
+</div>

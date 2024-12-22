@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import logo from "./src/assets/logo.svg";
+import LinkButton from "../mini/LinkButton.astro";
+import Logo from "../mini/Logo.astro";
+const navigate = [
+    {
+        text: "Home",
+        path: "#",
+    },
+    {
+        text: "About",
+        path: "#",
+    },
+    {
+        text: "Contact Us",
+        path: "#",
+    },
+    {
+        text: "Downloads",
+        path: "#",
+    },
+];
+---
+
+<div class="w-full py-2  flex justify-center content-center">
+    <div
+        class="flex flex-row align-middle items-center rounded-r-full rounded-l-full overflow-hidden px-5 justify-between w-full desktop:w-3/4 p-2 bg-white_c
+        smooth border-[2px] border-transparent hover:border-blue_c"
+    >
+        <div class="left w-fit">
+            <Logo />
+        </div>
+        <div class="center w-fit desktop:flex phone:hidden flex-row">
+            {
+                navigate.map((e) => (
+                    <div class="px-2 font-light hover:font-bold smooth text-blue_c hover:text-blue-900">
+                        <a href={e.path}>{e.text}</a>
+                    </div>
+                ))
+            }
+        </div>
+        <div class="right w-fit flex gap-2 flex-row">
+            <LinkButton path="#">Sign Up</LinkButton>
+        </div>
+    </div>
+</div>
