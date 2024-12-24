@@ -1,6 +1,7 @@
 ---
 import Header from "../components/utiles/Header.astro";
 import IntroHead from "../components/utiles/IntroHead.astro";
+import SearchSection from "../components/utiles/SearchSection.astro";
 import Home from "../layouts/Home.astro";
 ---
 
@@ -8,12 +9,9 @@ import Home from "../layouts/Home.astro";
 	<!-- Header -->
 	<Header />
 	<!-- Heading -->
-	<div class="w-full flex justify-center mt-12">
-		<div class="desktop:w-3/4  rounded-md p-0 text-blue_c">
-			<IntroHead />
-		</div>
-	</div>
+	<IntroHead />
 	<!-- Search -->
+	 <SearchSection/>
 	<!-- Objectives -->
 	<!-- footer -->
 </Home>

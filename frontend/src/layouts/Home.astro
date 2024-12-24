@@ -8,7 +8,11 @@
 		<title>Get Your Buddy</title>
 	</head>
 	<body class="bg-aqua_c">
-		<slot />
+		<div class="w-full flex justify-center desktop:mt-6">
+			<div class="desktop:w-3/4 phone:w-full phone:px-2 rounded-md p-0 text-blue_c">
+				<slot />
+			</div>
+		</div>
 	</body>
 </html>
 
@@ -28,7 +32,21 @@
 	.pattern {
 		@apply absolute inset-0 bg-[radial-gradient(circle_at_center,#ffffff33_0,var(--green-color)_8px,#acc7d7bf_8px),radial-gradient(circle_at_center,var(--green-color)_0,var(--green-color)_8px,transparent_8px)] bg-[size:30px_30px,30px_30px] bg-[position:0_0,15px_15px];
 	}
-	.smooth{
-		@apply transition-all duration-700 delay-0
+	.smooth {
+		@apply transition-all duration-700 delay-0;
+	}
+	.input-box{
+        @apply bg-transparent w-full text-2xl px-4 py-2 rounded-full border-[2px] border-white_c outline-none
+        placeholder:text-white placeholder:opacity-70
+        hover:bg-white_c smooth hover:text-gray-600 hover:placeholder-black hover:placeholder-opacity-70
+    }
+	.trans-to-white{
+		@apply smooth bg-transparent text-white_c 
+		border-2 border-white
+		hover:bg-white_c smooth hover:text-gray-600 
+	}
+	.placeholder-transition{
+		@apply smooth placeholder-white_c placeholder-opacity-60
+		hover:placeholder-black hover:placeholder-opacity-70
 	}
 </style>

@@ -4,7 +4,7 @@ import searching_someone from "../../assets/searching3.png";
 import { Image } from "astro:assets";
 ---
 
-<div class="heading">
+<div class="heading mb-6">
     <div class="p-0 flex flex-row flex-wrap justify-around items-center">
         <div class="intro flex flex-col gap-6">
             <h1 class="font-extralight desktop:text-6xl">
@@ -14,7 +14,7 @@ import { Image } from "astro:assets";
                 <LinkButton path="/auth">Get Started</LinkButton>
             </div>
         </div>
-        <div class="image">
+        <div class="image phone:hidden desktop:flex">
             <Image
                 class="scale-x-[-1]"
                 src={searching_someone}

@@ -13,7 +13,10 @@ export default {
 				blue_c: "#5c5ad6",
 				blue_dark_c:"#5c5ad6",
 				white_c: "#ffffff",
-				aqua_c: "#bdeffe"
+				aqua_c: "#bdeffe",
+				//
+				alert:'#ff731e',
+				success:"#39ff39",
 			},
 			screens: {
 				phone: '0px',//min-width:480px

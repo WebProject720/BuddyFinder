@@ -1,0 +1,30 @@
+---
+interface Props {
+    name?: string;
+    id?: string;
+    placeholder?: string;
+    error?: boolean;
+    alert?: string;
+}
+const { name, id, placeholder, error = null, alert } = Astro.props;
+const options = ["Apple", "Boy", "Cat", "Dog", "zeep"];
+---
+
+<div class="w-full relative">
+    <input
+        class={`input-box ${error == null ? "" : error ? "border-alert" : "border-success"}`}
+        type="text"
+        name={name}
+        placeholder={placeholder}
+        id={id}
+        />
+    <div class="py-2 text-left px-2">
+        {
+            error == null ? null : error ? (
+                <p class="text-alert font-semibold">{alert}</p>
+            ) : (
+                <p class="text-success font-semibold">{alert}</p>
+            )
+        }
+    </div>
+</div>
